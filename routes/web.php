@@ -54,14 +54,3 @@ Route::group(['prefix'=>'ficha','middleware'=>'auth'],function (){
     Route::get('/info2',[FichaController::class,'error2'])->name('ficha.error2');
     Route::post('/recibos.pdf.php',[FichaController::class,'imprimir']);
 });
-
-/*
-Route::get('/login', 'SessionsController@create');
-Route::group(['middleware'=>'App\Http\Middleware\MemberMiddleware'],function (){
-    Route::match(['get','post'],'/ficha','FichaController@index');
-});
-Route::get('/register', 'RegistrationController@create');
-Route::get('/convocatoria', 'ConvocatoriaController@index');
-Route::post('register', 'RegistrationController@store');
-
-*/
