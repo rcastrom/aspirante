@@ -21,8 +21,8 @@ class PreformatoController extends Controller
             $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'robot.escolares@ite.edu.mx';       // SMTP username
-            $mail->Password = 'ywzteqinycssrxww';                 // SMTP password
+            $mail->Username = 'x';       // SMTP username
+            $mail->Password = '';                 // SMTP password
             $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 465;                                    // TCP port to connect to
             $mail->CharSet = 'UTF-8';                               //Manejo de acentos
