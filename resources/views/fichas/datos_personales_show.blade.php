@@ -8,7 +8,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
             <div class="card" style="width: 30rem;">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item active">Datos generales</li>
@@ -36,7 +36,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-4">
             <div class="card" style="width: 30rem;">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item active">Domicilio</li>
@@ -52,6 +52,19 @@
                         Municipio: {{$municipio_domicilio->municipio}}</li>
                     <li class="list-group-item">
                         Teléfono: {{$datos_personale->telefono}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card" style="width: 30rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item active">Medios de contacto</li>
+                    <li class="list-group-item list-group-item-action list-group-item-light">
+                        Correo electrónico {{$datos_personale->correo}}</li>
+                    <li class="list-group-item">
+                        Facebook {{$datos_personale->fb}}</li>
+                    <li class="list-group-item list-group-item-action list-group-item-light">
+                        Instagram {{$datos_personale->ig}}</li>
                 </ul>
             </div>
         </div>

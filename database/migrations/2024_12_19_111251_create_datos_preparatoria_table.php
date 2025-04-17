@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('aspirante_id')->constrained('fichas','id');
             $table->foreignId('estado_id')->constrained('estados','estado_id');
+            $table->foreignId('municipio_id')->constrained('municipios','municipio_id');
             $table->string('nombre_preparatoria');
             $table->string('egreso',4);
             $table->string('promedio');

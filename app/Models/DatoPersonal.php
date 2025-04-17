@@ -18,11 +18,14 @@ class DatoPersonal extends Model
         'carrera'=>'string',
         'telefono'=>'string',
         'calle_numero'=>'string',
+        'correo'=>'string',
+        'fb'=>'string',
+        'ig'=>'string',
     ];
     protected $fillable=['nombre','apellido_paterno','apellido_materno','fecha_nacimiento',
         'sexo','pais_id','estado_nacimiento_id','municipio_nacimiento_id','etnia_id','curp',
         'calle_numero','colonia','telefono','estado_domicilio_id',
-        'municipio_domicilio_id','codigo_postal'];
+        'municipio_domicilio_id','codigo_postal','correo','carrera'];
 
     public function aspirante(): BelongsTo
     {

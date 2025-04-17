@@ -59,7 +59,8 @@ class DatoPersonalController extends Controller
             'calle_numero'=>'required',
             'colonia'=>'required',
             'municipio'=>'required',
-            'codigo_postal'=>'required'
+            'codigo_postal'=>'required',
+            'correo'=>'required|email',
         ],[
             'nombre_aspirante.required'=>'Por favor, escriba su nombre',
             'apellido_materno.required'=>'Por favor, escriba su apellido materno',
@@ -70,7 +71,9 @@ class DatoPersonalController extends Controller
             'calle_numero.required'=>'Debe indicar el domicilio (calle y numero)',
             'colonia.required'=>'Debe indicar la colonia',
             'municipio.required'=>'Indique por favor su municipio de residencia',
-            'codigo_postal.required'=>'Indique por favor su código postal'
+            'codigo_postal.required'=>'Indique por favor su código postal',
+            'correo.email'=>'Debes de indicar un correo electrónico válido',
+            'correo.required'=>'Por favor, indica tu correo electrónico',
         ]);
         $registro_dato_personal=new DatoPersonal();
         $registro_dato_personal->aspirante_id=session('aspirante');
@@ -91,6 +94,9 @@ class DatoPersonalController extends Controller
         $registro_dato_personal->estado_domicilio_id=$request->entidad_federativa;
         $registro_dato_personal->municipio_domicilio_id=$request->municipio;
         $registro_dato_personal->telefono=$request->telefono;
+        $registro_dato_personal->correo=$request->correo;
+        $registro_dato_personal->fb=$request->fb ?? null;
+        $registro_dato_personal->ig=$request->ig ?? null;
         $registro_dato_personal->save();
         Ficha::where('aspirante',session('aspirante'))->update([
             'bandera1'=>1
@@ -152,7 +158,8 @@ class DatoPersonalController extends Controller
             'calle_numero'=>'required',
             'colonia'=>'required',
             'municipio'=>'required',
-            'codigo_postal'=>'required'
+            'codigo_postal'=>'required',
+            'correo'=>'required|email',
         ],[
             'nombre_aspirante.required'=>'Por favor, escriba su nombre',
             'apellido_materno.required'=>'Por favor, escriba su apellido materno',
@@ -163,7 +170,9 @@ class DatoPersonalController extends Controller
             'calle_numero.required'=>'Debe indicar el domicilio (calle y numero)',
             'colonia.required'=>'Debe indicar la colonia',
             'municipio.required'=>'Indique por favor su municipio de residencia',
-            'codigo_postal.required'=>'Indique por favor su código postal'
+            'codigo_postal.required'=>'Indique por favor su código postal',
+            'correo.email'=>'Debes de indicar un correo electrónico válido',
+            'correo.required'=>'Por favor, indica tu correo electrónico',
         ]);
         DatoPersonal::where('aspirante_id',$datos_personale->aspirante_id)->update([
             'nombre'=>$request->nombre_aspirante,
@@ -183,6 +192,9 @@ class DatoPersonalController extends Controller
             'codigo_postal'=>$request->codigo_postal,
             'estado_domicilio_id'=>$request->entidad_federativa,
             'municipio_domicilio_id'=>$request->municipio,
+            'correo'=>$request->correo,
+            'fb'=>$request->fb ?? null,
+            'ig'=>$request->ig ?? null,
         ]);
         return redirect()->route('dashboard');
     }

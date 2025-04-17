@@ -65,8 +65,9 @@ class DatoPreparatoriaController extends Controller
     public function show(DatoPreparatoria $datos_preparatorium)
     {
         $estado=$datos_preparatorium->estado()->first();
+        $municipio=$datos_preparatorium->municipio()->first();
         return view('fichas.datos_preparatoria_show',
-            compact('datos_preparatorium','estado'));
+            compact('datos_preparatorium','estado','municipio'));
     }
 
     /**
@@ -98,6 +99,7 @@ class DatoPreparatoriaController extends Controller
         ]);
         DatoPreparatoria::where('id',$datos_preparatorium->id)->update([
             'estado_id'=>$request->estado_id,
+            'municipio_id'=>$request->municipio_id,
             'nombre_preparatoria'=>$request->nombre_preparatoria,
             'egreso'=>$request->egreso,
             'promedio'=>$request->promedio,

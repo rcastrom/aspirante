@@ -15,12 +15,14 @@
                     <li class="list-group-item list-group-item-action list-group-item-light">
                         Estado en donde cursaste la preparatoria: {{$estado->estado}}</li>
                     <li class="list-group-item">
-                        Escuela Preparatoria de procedencia: {{$datos_preparatorium->nombre_preparatoria}}</li>
+                        Municipio en donde cursaste la preparatoria: {{$municipio->municipio}}
+                    </li>
                     <li class="list-group-item list-group-item-action list-group-item-light">
-                        Año de egreso: {{$datos_preparatorium->egreso}}</li>
+                        Escuela Preparatoria de procedencia: {{$datos_preparatorium->nombre_preparatoria}}</li>
                     <li class="list-group-item">
+                        Año de egreso: {{$datos_preparatorium->egreso}}</li>
+                    <li class="list-group-item list-group-item-action list-group-item-light">
                         Promedio de egreso: {{$datos_preparatorium->promedio}}</li>
-
                 </ul>
             </div>
         </div>

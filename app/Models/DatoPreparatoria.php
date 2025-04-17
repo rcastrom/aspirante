@@ -9,10 +9,11 @@ class DatoPreparatoria extends Model
 {
     protected $table = 'datos_preparatoria';
 
-    protected $fillable=['estado_id','nombre_preparatoria','egreso','promedio'];
+    protected $fillable=['estado_id','municipio_id','nombre_preparatoria','egreso','promedio'];
     protected $casts=[
         'aspirante_id'=>'integer',
         'estado_id'=>'integer',
+        'municipio_id'=>'integer',
         'nombre_preparatoria'=>'string',
         'egreso'=>'string',
         'promedio'=>'string',
@@ -24,5 +25,8 @@ class DatoPreparatoria extends Model
     }
     public function estado(): BelongsTo{
         return $this->belongsTo(Estado::class, 'estado_id','estado_id');
+    }
+    public function municipio(): BelongsTo{
+        return $this->belongsTo(Municipio::class, 'municipio_id','id');
     }
 }

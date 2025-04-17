@@ -118,7 +118,6 @@
                 <input type="text" name="codigo_postal" id="codigo_postal" maxlength="5" required
                        class="form-control" onblur="this.value=this.value.toUpperCase();">
             </div>
-
         </div>
         <div class="row">
             <div class="form-group col-md-6">
@@ -138,6 +137,30 @@
                 <label for="telefono">Teléfono</label>
                 <input type="text" name="telefono" id="telefono" required
                        class="form-control" onblur="this.value=this.value.toUpperCase();">
+            </div>
+        </div>
+        <legend>Medios de contacto</legend>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" name="correo" id="correo" required
+                       class="form-control" onblur="this.value=this.value.toLowerCase();">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="fb">Facebook</label>
+                <input type="text" name="fb" id="fb"
+                       class="form-control" onblur="this.value=this.value.toLowerCase();">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="ig">Instagram</label>
+                <input type="text" name="ig" id="ig"
+                       class="form-control" onblur="this.value=this.value.toLowerCase();">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Indica por favor tus redes sociales solamente si pueden servir como un
+                medio de contacto.
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Continuar</button>

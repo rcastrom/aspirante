@@ -31,6 +31,9 @@ return new class extends Migration
             $table->foreignId('estado_domicilio_id')->constrained('estados','estado_id');
             $table->foreignId('municipio_domicilio_id')->constrained('municipios','id');
             $table->string('codigo_postal',5);
+            $table->string('correo');
+            $table->string('fb')->nullable();
+            $table->string('ig')->nullable();
             $table->timestamps();
         });
     }
