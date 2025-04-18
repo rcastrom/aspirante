@@ -30,10 +30,11 @@ class FichaController extends Controller
                 [
                     'periodo'=>$ficha->fichas,
                     'aspirante'=>$usuario
-                ])->select(['id','bandera1','bandera2','bandera3','bandera4','bandera5'])
+                ])->select(['id','ficha','bandera1','bandera2','bandera3','bandera4','bandera5'])
                 ->first();
             session([
                 'aspirante'=>$datos_solicitante->id,
+                'ficha'=>$datos_solicitante->ficha,
                 'bandera1'=>$datos_solicitante->bandera1,
                 'bandera2'=>$datos_solicitante->bandera2,
                 'bandera3'=>$datos_solicitante->bandera3,
@@ -41,13 +42,16 @@ class FichaController extends Controller
                 'bandera5'=>$datos_solicitante->bandera5,
             ]);
         }else{
+            $nueva_ficha=Ficha::where('periodo',$ficha->fichas)->count()+1;
             $registro=new Ficha();
             $registro->periodo=$ficha->fichas;
             $registro->aspirante=$usuario;
+            $registro->ficha=$nueva_ficha;
             $registro->save();
             $id=$registro->id;
             session([
                 'aspirante'=>$id,
+                'ficha'=>$nueva_ficha,
                 'bandera1'=>0,
                 'bandera2'=>0,
                 'bandera3'=>0,

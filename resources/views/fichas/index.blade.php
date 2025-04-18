@@ -15,6 +15,7 @@
             hasta que se haya terminado éste proceso. Una vez realizado el pago en el banco,
             entrega una copia del mismo al Departamento de Desarrollo Académico
         </p>
+        <h4>Número de ficha {{session('ficha')}}</h4>
     @else
         <h2>Período fuera de tiempo</h2>
         <p>Por el momento, el período de solicitud de ficha ha sido cerrado</p>
