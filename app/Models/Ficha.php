@@ -15,6 +15,7 @@ class Ficha extends Model
         'periodo'=>'string',
         'aspirante'=>'integer',
         'ficha'=>'integer',
+        'aceptado'=>'boolean',
         'bandera1'=>'integer',
         'bandera2'=>'integer',
         'bandera3'=>'integer',
@@ -23,7 +24,7 @@ class Ficha extends Model
         'control'=>'string',
         'pago_ficha'=>'integer',
         'pago_propedeutico'=>'integer',
-        'pago_inscripcion'=>'integer',
+        'pago_inscripcion'=>'integer'
     ];
     public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {

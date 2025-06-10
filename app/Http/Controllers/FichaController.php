@@ -35,6 +35,7 @@ class FichaController extends Controller
             session([
                 'aspirante'=>$datos_solicitante->id,
                 'ficha'=>$datos_solicitante->ficha,
+                'periodo'=>$ficha->fichas,
                 'bandera1'=>$datos_solicitante->bandera1,
                 'bandera2'=>$datos_solicitante->bandera2,
                 'bandera3'=>$datos_solicitante->bandera3,
@@ -52,6 +53,7 @@ class FichaController extends Controller
             session([
                 'aspirante'=>$id,
                 'ficha'=>$nueva_ficha,
+                'periodo'=>$ficha->fichas,
                 'bandera1'=>0,
                 'bandera2'=>0,
                 'bandera3'=>0,

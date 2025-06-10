@@ -24,6 +24,7 @@ return new class extends Migration
             $table->integer('pago_ficha')->default(0);
             $table->integer('pago_propedeutico')->default(0);
             $table->integer('pago_inscripcion')->default(0);
+            $table->integer('aceptado')->default(0);
             $table->string('control')->nullable();
             $table->timestamps();
         });

@@ -44,6 +44,48 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
+        'fotos'=>[
+            'driver'=>'local',
+            'root'=>storage_path('app/public/photos'),
+            'url'=>env('APP_URL').'/foto',
+            'visibility'=>'public',
+        ],
+        'curp'=>[
+            'driver'=>'local',
+            'root'=>storage_path('app/public/curp'),
+            'url'=>env('APP_URL').'/curp',
+            'visibility'=>'public',
+        ],
+        'certificados'=>[
+            'driver'=>'local',
+            'root'=>storage_path('app/public/certificados'),
+            'url'=>env('APP_URL').'/certificado',
+            'visibility'=>'public',
+        ],
+        'constancias'=>[
+            'driver'=>'local',
+            'root'=>storage_path('app/public/constancias'),
+            'url'=>env('APP_URL').'/constancia',
+            'visibility'=>'public',
+        ],
+        'actas'=>[
+            'driver'=>'local',
+            'root'=>storage_path('app/public/actas'),
+            'url'=>env('APP_URL').'/acta',
+            'visibility'=>'public',
+        ],
+        'seguros'=>[
+            'driver'=>'local',
+            'root'=>storage_path('app/public/seguros'),
+            'url'=>env('APP_URL').'/seguro',
+            'visibility'=>'public',
+        ],
+        'formas'=>[
+            'driver'=>'local',
+            'root'=>storage_path('app/public/formas_migratorias'),
+            'url'=>env('APP_URL').'/forma_migratoria',
+            'visibility'=>'public',
+        ],
 
         's3' => [
             'driver' => 's3',
@@ -72,6 +114,13 @@ return [
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
+        public_path('/foto')=>storage_path('app/public/photos'),
+        public_path('/curp')=>storage_path('app/public/curp'),
+        public_path('/certificado')=>storage_path('app/public/certificados'),
+        public_path('/constancia')=>storage_path('app/public/constancias'),
+        public_path('/acta')=>storage_path('app/public/actas'),
+        public_path('/seguro')=>storage_path('app/public/seguros'),
+        public_path('/forma_migratoria')=>storage_path('app/public/formas_migratorias'),
     ],
 
 ];

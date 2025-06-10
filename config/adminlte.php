@@ -133,10 +133,10 @@ return [
     |
     */
 
-    'usermenu_enabled' => true,
+    'usermenu_enabled' => false,
     'usermenu_header' => false,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => true,
+    'usermenu_image' => false,
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
 
@@ -263,7 +263,7 @@ return [
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
-    'profile_url' => 'user/profile',
+    'profile_url' => false, #'user/profile'
     'disable_darkmode_routes' => false,
 
     /*
@@ -331,6 +331,10 @@ return [
                 [
                     'text' => 'Datos en caso de emergencia',
                     'url' => '/datos_emergencia',
+                ],
+                [
+                    'text' => 'Documentos',
+                    'url' => '/documentos',
                 ],
             ],
         ],
