@@ -36,6 +36,15 @@
         de llevar a cabo la carga de documentos correspondientes.
         <strong>SIN EMBARGO</strong>, el sistema eliminará lo que previamente haya subido
     </p>
+    <div class="card" aria-hidden="true">
+        <div class="card-body">
+            <h3 class="card-title placeholder-glow">IMPORTANTE</h3><br>
+            <div class="alert alert-danger" role="alert">
+                En cada ocasión en la que suba documentos,
+                el sistema borrará lo que previamente haya cargado
+            </div>
+        </div>
+    </div>
     <p>
         <a href="{{route('documentos.create')}}">Ir a la sección correspondiente</a>
     </p>
